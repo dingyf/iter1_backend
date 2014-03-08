@@ -14,7 +14,9 @@ Iter1::Application.routes.draw do
         post 'registrations' => 'registrations#create', :as => 'register'
         post 'sessions' => 'sessions#create', :as => 'login'
         delete 'sessions' => 'sessions#destroy', :as => 'logout'
-      end
+        post 'activities' => 'users#createActivity'
+        get 'activities' => 'users#myActivities'
+      end 
     end
   end
   
